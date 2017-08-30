@@ -5,10 +5,10 @@
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <script src="../jquery/jquery.min.js"></script>
     <script src="../bootstrap/js/bootstrap.min.js"></script>
-    <script src="../js/correios.js"></script>
-    <link rel="stylesheet" href="../css/correios.css">
+    <script src="../js/hotel.js"></script>
+    <link rel="stylesheet" href="../css/hotel.css">
     <link rel="stylesheet" href="../css/geral.css">
-    <title>Correios</title>
+    <title>Hotel</title>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
 
     <div class="jumbotron">
         <div class="container">
-            <h2 id='titulo'>Calculo de frete</h2>
+            <h2 id='titulo'>Calculo da hospedagem</h2>
             <form>
                 <div class="form-group">
                     <div class='row'>
@@ -27,10 +27,16 @@
                     </div>
                     <div class="btn-group" data-toggle="buttons">
                         <label class="btn btn-primary active">
-                            <input type="radio" name="tipo" id="normal" autocomplete="off" checked> Normal
+                            <input type="radio" name="tipo" id="a" autocomplete="off" checked> A = 150,00 R$
                         </label>
                         <label class="btn btn-primary">
-                            <input type="radio" name="tipo" id="sedex" autocomplete="off"> Sedex
+                            <input type="radio" name="tipo" id="b" autocomplete="off"> B = 100,00 R$
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="radio" name="tipo" id="c" autocomplete="off"> C = 75,00 R$
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="radio" name="tipo" id="d" autocomplete="off"> D = 50,00 R$
                         </label>
                     </div>
                 </div>
@@ -39,16 +45,12 @@
                     <input type="text" class="form-control" id="nome">
                 </div>
                 <div class="form-group">
-                    <label for="rg">RG:</label>
-                    <input type="number" class="form-control" id="rg">
+                    <label for="diarias">Diárias:</label>
+                    <input type="number" class="form-control" id="diarias">
                 </div>
                 <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email">
-                </div>
-                <div class="form-group">
-                    <label for="peso">Peso:</label>
-                    <input type="number" class="form-control" id="peso">
+                    <label for="consumo">Valor de consumo:</label>
+                    <input type="number" class="form-control" id="consumo">
                 </div>
                 <div class="form-group">
                     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#resultado" onclick="calcular()">Calcular</button>
@@ -58,10 +60,18 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title">Valor do frete</h4>
+                                    <h4 class="modal-title">Valor</h4>
                                 </div>
                                 <div class="modal-body valor">
-                                    <label align='right' id="valor"></label>
+                                    <label id="nomeHospede" class='row'>Nome: </label>
+                                    <label id="tipoApartamento" class='row'>Tipo: </label>
+                                    <label id="numeroDiarias" class='row'>Número diarias: </label>
+                                    <label id="valorUnitarioDiaria" class='row'>Valor unidade diária: </label>
+                                    <label id="valorTotalDiarias" class='row'>Valor total diárias: </label>
+                                    <label id="valorConsumoInterno" class='row'>Valor consumo interno:</label>
+                                    <label id="subtotal" class='row'>Subtotal: </label>
+                                    <label id="valorServico" class='row'>Taxa serviço: </label>
+                                    <label id="total" class='row'>Total: </label>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

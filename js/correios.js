@@ -6,5 +6,5 @@ function calcular() {
     } else {
         valor = 7.80;
     }   
-    document.getElementById("valor").innerHTML = peso * valor + 'R$';
+    document.getElementById("valor").innerHTML = (peso * valor) + 'R$';
 }

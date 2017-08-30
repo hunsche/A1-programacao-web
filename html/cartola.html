@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src="../jquery/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/cartola.js"></script>
+    <link rel="stylesheet" href="../css/geral.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+    <title>Cartola</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-toggleable-md navbar-light">
+        <button class="navbar-toggler"></button>
+        <a class="navbar-brand" href="/">Home</a>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="container">
+            <h2 id='titulo'>Cartola FC</h2>
+            <form>
+                <div class="form-group">
+                    <label for="nome1">Nome 1:</label>
+                    <input type="text" class="form-control" id="nome1">
+                </div>
+                <div class="form-group">
+                    <label for="pontuacao1">Pontuação 1:</label>
+                    <input type="number" class="form-control" id="pontuacao1">
+                </div>
+                <div class="form-group">
+                    <label for="nome2">Nome 2:</label>
+                    <input type="text" class="form-control" id="nome2">
+                </div>
+                <div class="form-group">
+                    <label for="pontuacao2">Pontuação 2:</label>
+                    <input type="number" class="form-control" id="pontuacao2">
+                </div>
+                <div class="form-group">
+                    <label for="nome3">Nome 3:</label>
+                    <input type="text" class="form-control" id="nome3">
+                </div>
+                <div class="form-group">
+                    <label for="pontuacao3">Pontuação 3:</label>
+                    <input type="number" class="form-control" id="pontuacao3">
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#resultado" onclick="ordenar()">Calcular</button>
+
+                    <div class="modal fade" id="resultado" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Valor</h4>
+                                </div>
+                                <div class="modal-body valor">
+                                    <table id="table" data-height="460">
+                                        <thead>
+                                            <tr>
+                                                <th data-field="pos">Posição</th>
+                                                <th data-field="nome">Nome</th>
+                                                <th data-field="pont">Pontuação</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
